@@ -1,127 +1,119 @@
-# 📚 Microelectronics, RF, & Wireless Communications Study Plan  
-**Prerequisite:** High school math. **Goal:** Master electronics, RF design, and 5G/6G systems.  
+# 📚 Math & Microelectronics Master Plan  
+*(Total Duration: ~24-30 months | Adjustable Pace)*  
+
+## Legend  
+- 📖 Book Chapter  
+- 🔧 Project  
+- ✅ Validation Test  
+- ⚙️ Tools Needed  
+- ➕ Math Focus  
 
 ---
 
-## 📅 Semester 1: Electronics & RF Crash Course (Weeks 1-20)  
-**Goal:** Build a 2.4GHz PA while mastering fundamentals.  
+## 📅 Semester 1: Foundations of Electronics & Math (Weeks 1-20)  
+**Goal:** Build a 2.4GHz PA while mastering algebra, calculus, and circuit analysis.  
 
 ### Weekly Breakdown  
 
-| Week | Focus Area               | 📖 Books/Resources                                                                 | 🔧 Project                                                                 | ✅ Validation                                                                 |  
-|------|--------------------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------|  
-| 1    | DC Circuits              | *Make: Electronics* (Ch. 1-2), *Art of Electronics* (Ch. 1)                       | LED + resistor circuit                                                    | Verify Ohm’s Law with multimeter                                             |  
-| 2    | AC Circuits              | *Practical Electronics* (Ch. 3), *ARRL Handbook* (Ch. 4)                         | 555 timer oscillator                                                      | Measure 1kHz square wave (oscilloscope)                                      |  
-| 3    | Transistors              | *Art of Electronics* (Ch. 2), *RF Microelectronics* (Razavi, Ch. 3)              | Class-A amplifier (2N3904)                                               | Measure gain ≥ 10dB (signal generator)                                       |  
-| 4    | LC Tanks                 | *RF Circuit Design* (Bowick, Ch. 2), *ARRL Handbook* (Ch. 6)                     | 10MHz crystal oscillator                                                  | Verify resonance with NanoVNA (±100ppm)                                      |  
-| 5    | PCB Design               | *Getting Started with KiCad*, *PCB Currents* (Brooks, Ch. 3)                     | 50Ω microstrip line                                                       | Measure S11 < -10dB @ 100MHz (NanoVNA)                                       |  
-| 6    | LNAs                     | *RF Microelectronics* (Ch. 5), *Experimental Methods* (Hayward, Ch. 4)           | 2.4GHz LNA (BFU730F)                                                     | Gain ≥ 15dB, NF < 3dB (TinySA)                                               |  
-| 7-8  | PAs                      | *RF Power Amplifiers* (Cripps, Ch. 3), *ARRL Handbook* (Ch. 14)                  | 100MHz PA (2N5109)                                                       | Output ≥ 100mW, efficiency > 30% (RF power meter)                             |  
-| 9-10 | Integration              | –                                                                                | **2.4GHz PA (MRF24G300HS)**                                              | 300mW @ 2.4GHz, S11 < -15dB (spectrum analyzer)                              |  
+| Week | Electronics Focus | ➕ Math Focus               | 📖 Resources                                                                 | 🔧 Projects                                                                 | ✅ Validation                                                                 | ⚙️ Tools               |
+|------|--------------------|----------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------|------------------------|
+| 1    | DC Circuits        | Algebra Basics             | *Make: Electronics (Ch. 1-2)*, *Algebra I for Dummies*                     | LED + resistor circuit; Solve linear equations for voltage divider          | Measure current (I = V/R); Correct resistor calculations                     | Multimeter, Python    |
+| 2    | AC Circuits        | Functions & Graphs         | *Practical Electronics (Ch. 3)*, *Precalculus (Stewart)*                   | 555 timer oscillator; Plot capacitor charging curve                         | Verify 1kHz square wave; Match plotted curve to theory                       | Oscilloscope, Desmos  |
+| 3    | Transistors        | Trigonometry               | *Art of Electronics (Ch. 2)*, *Trigonometry for Dummies*                   | Class-A amplifier; Analyze AC phase shifts                                  | Gain ≥ 10dB; Correctly calculate phase angles                                | Signal generator      |
+| 4    | LC Tanks           | Complex Numbers            | *RF Circuit Design (Bowick)*, *Advanced Algebra (Gelfand)*                 | 10MHz crystal oscillator; Convert impedance (rectangular ↔ polar)           | Resonance within ±100ppm; Accurate impedance conversions                     | NanoVNA               |
+| 5    | PCB Design         | Limits & Derivatives       | *PCB Currents (Brooks)*, *Calculus for Dummies*                            | 50Ω microstrip line; Simulate derivative of square wave                     | S11 < -10dB @ 100MHz; Match simulated/measured results                       | KiCad, LTSpice       |
+| 6    | LNAs               | Integrals                  | *RF Microelectronics (Razavi)*, *Differential Equations for Dummies*       | 2.4GHz LNA; Calculate energy stored in capacitors                           | Gain ≥ 15dB; Correct energy calculation (E = ½CV²)                           | TinySA                |
+| 7-8  | PAs                | Differential Equations     | *RF Power Amplifiers (Cripps)*, *Engineering Circuit Analysis (Hayt)*      | 100MHz PA; Solve RLC circuit equations analytically                         | Output ≥ 100mW; Validate transient response                                  | RF power meter        |
+| 9-10 | Integration        | Advanced Complex Numbers   | –                                                                           | 2.4GHz PA; Design bandpass filter with phasors                              | 300mW @ 2.4GHz; Filter matches S21 > -3dB in band                            | Spectrum analyzer     |
 
-**Final Project:**  
-✅ Defend your PA design (explain stability, matching, and efficiency).  
+**Semester 1 Final Exam:**  
+✅ Defend PA design using calculus and complex impedance analysis.  
 
 ---
 
-## 📅 Semester 2: Digital Systems & USB (Weeks 21-36)  
-**Goal:** Master STM32, USB 2.0, and mixed-signal systems.  
+## 📅 Semester 2: Digital Systems & Applied Math (Weeks 21-36)  
+**Goal:** Master STM32, USB 2.0, and linear algebra for signal processing.  
 
-### Key Projects  
+### Weekly Breakdown  
 
-| Week | Focus Area         | 📖 Books/Resources                          | 🔧 Project                          | ✅ Validation                                  |  
-|------|--------------------|--------------------------------------------|-------------------------------------|-----------------------------------------------|  
-| 11   | Digital Logic      | *Digital Design* (Harris, Ch. 1-3)        | 74HC00 logic tester                | Truth table matches (logic analyzer)           |  
-| 12   | STM32 Basics       | *Mastering STM32* (Noviello, Ch. 1-3)     | Blinky LED (HAL)                   | GPIO toggles at 1Hz                            |  
-| 13   | USB-CDC            | *USB Complete* (Axelson, Ch. 3)           | Virtual COM port                   | "Hello World" over USB                         |  
-| 14   | USB HID            | *USB in a Nutshell* (Beyond Logic)        | Custom USB keyboard                | Keypress registers (Wireshark)                 |  
-| 15-16| RF Control         | –                                        | STM32 + PA Control                 | Adjust PA bias via USB                         |  
+| Week | Electronics Focus    | ➕ Math Focus               | 📖 Resources                                      | 🔧 Projects                                                    | ✅ Validation                                      | ⚙️ Tools               |
+|------|-----------------------|----------------------------|--------------------------------------------------|---------------------------------------------------------------|----------------------------------------------------|------------------------|
+| 11   | Digital Logic         | Vectors & Matrices         | *Digital Design (Harris)*, *Linear Algebra (Axler)* | 74HC00 logic tester; Solve resistor network via matrices      | Truth table matches; Correct matrix solution      | Logic analyzer        |
+| 12   | STM32 Basics          | Probability Basics         | *Mastering STM32*, *Probability (Devore)*         | Blinky LED; Simulate Gaussian noise in Python                 | GPIO toggles at 1Hz; SNR > 20dB in simulation      | STM32F4 Discovery     |
+| 13   | USB-CDC               | Statistics for Electronics | *USB Complete (Axelson)*, *Art of Electronics*    | Virtual COM port; Measure thermal noise in resistor           | "Hello World" over USB; Noise matches Johnson-Nyquist | USB protocol analyzer |
+| 14   | USB HID               | Linear Algebra Applications| *USB in a Nutshell*                                | Custom USB keyboard; Implement MIMO matrix operations         | Keypress registers; Correct beamforming weights   | Wireshark             |
+| 15-16| RF Control            | Probability Applications   | –                                                 | STM32 + PA Control; Simulate bit error rates (BER)            | Adjust PA bias via USB; BER < 1e-4                 | Custom PCB            |
 
-**Final Project:**  
-✅ Stream sensor data to PC at 1Mbps over USB.  
+**Semester 2 Final Exam:**  
+✅ Stream sensor data over USB while applying noise reduction using statistics.  
 
 ---
 
 ## 📅 Semester 3: Advanced RF & Signal Integrity (Weeks 37-52)  
-**Goal:** Phased arrays, RFICs, and EMI mitigation.  
+**Goal:** Phased arrays, Fourier transforms, and EMI mitigation.  
 
-### Key Projects  
+### Weekly Breakdown  
 
-| Week | Focus Area          | 📖 Books/Resources                          | 🔧 Project                          | ✅ Validation                                  |  
-|------|---------------------|--------------------------------------------|-------------------------------------|-----------------------------------------------|  
-| 17   | S-Parameters        | *Microwave Engineering* (Pozar, Ch. 4)    | 2.4GHz filter                      | S21 > -3dB in band (NanoVNA)                  |  
-| 18   | PCB Stackup         | *Signal Integrity* (Bogatin, Ch. 7)       | 4-layer FPGA board                 | TDR shows Z0 = 50Ω ±10%                       |  
-| 19-20| Phased Arrays       | *Phased Array Antennas* (Hansen)          | 2x2 patch array                    | Beam steering ±30° (ADAR1000 eval board)       |  
+| Week | Electronics Focus | ➕ Math Focus               | 📖 Resources                                      | 🔧 Projects                                      | ✅ Validation                          | ⚙️ Tools             |
+|------|--------------------|----------------------------|--------------------------------------------------|-------------------------------------------------|----------------------------------------|----------------------|
+| 17   | S-Parameters       | Fourier Series             | *Microwave Engineering (Pozar)*, *Signals (Oppenheim)* | 2.4GHz filter; FFT analysis of AM radio signal  | S21 > -3dB in band; Clean FFT spectrum | NanoVNA, Python     |
+| 18   | PCB Stackup        | Laplace Transforms         | *Signal Integrity (Bogatin)*, *Engineering Circuit Analysis* | 4-layer FPGA board; Design low-pass filter      | Z0 = 50Ω ±10%; Stable filter response  | Altium, Qucs        |
+| 19-20| Phased Arrays      | PDEs (Wave Equation)       | *Phased Array Antennas (Hansen)*, *PDEs (Farlow)* | 2x2 patch array; Simulate PCB trace propagation | Beam steering ±30°; Signal integrity   | ADAR1000, ANSYS HFSS|
 
-**Final Project:**  
-✅ Demo a beamforming array at 2.4GHz.  
+**Semester 3 Final Exam:**  
+✅ Demo beamforming array with Fourier-based signal analysis.  
 
 ---
 
 ## 📅 Semester 4: Capstone – 2.4GHz SDR + PA (Weeks 53-68)  
-**Goal:** Build a software-defined radio with integrated PA.  
+**Goal:** Build a software-defined radio with integrated PA and DSP.  
 
-### Milestones  
-1. **SDR Frontend**: LimeSDR/RTL-SDR + 2.4GHz PA.  
-2. **STM32 Baseband Processor**: USB 2.0 HS.  
-3. **GNU Radio Companion**: FSK modulation/demod.  
-4. **FCC Pre-Compliance Test**: Scan for spurs.  
+### Project Milestones  
+1. **SDR Frontend**: LimeSDR + 2.4GHz PA (Apply Laplace transforms for stability).  
+2. **STM32 Baseband**: Implement FFT-based modulation (Python/C).  
+3. **FCC Pre-Compliance**: Statistical analysis of spurious emissions.  
 
 **Validation:**  
-✅ Transmit/receive WiFi beacon packets.  
+✅ Transmit/receive WiFi packets with EVM < -25dB (Validate using SNR math).  
 
 ---
 
 ## 📅 Semester 5: 5G/6G Research (Weeks 69-84)  
-**Goal:** mmWave, massive MIMO, and RFIC design.  
+**Goal:** mmWave systems, massive MIMO, and RFIC design.  
 
-### Key Projects  
+### Weekly Breakdown  
 
-| Week | Focus Area          | 📖 Books/Resources                          | 🔧 Project                          | ✅ Validation                                  |  
-|------|---------------------|--------------------------------------------|-------------------------------------|-----------------------------------------------|  
-| 21   | 5G NR               | *5G NR* (Dahlman, Ch. 6)                  | OFDM simulation (Python)           | Plot constellation diagram                    |  
-| 22   | mmWave              | *mmWave Wireless* (Rappaport, Ch. 3)      | 28GHz patch antenna (HFSS)         | Simulate beamwidth ≤ 10°                      |  
-| 23-24| RFIC Design         | *RFIC Design Fundamentals* (Lee, Ch. 5)   | LNA design (Cadence)               | Simulate NF < 2dB @ 28GHz                     |  
+| Week | Electronics Focus | ➕ Math Focus               | 📖 Resources                                      | 🔧 Projects                                      | ✅ Validation                | ⚙️ Tools            |
+|------|--------------------|----------------------------|--------------------------------------------------|-------------------------------------------------|------------------------------|---------------------|
+| 21   | 5G NR              | OFDM & Matrix Algebra      | *5G NR (Dahlman)*, *Linear Algebra Done Right*   | OFDM simulator (Python); MIMO precoding         | EVM < -25dB                  | MATLAB             |
+| 22   | mmWave             | PDEs (Heat Equation)       | *mmWave Wireless (Rappaport)*                   | 28GHz antenna; Thermal simulation of PA         | Beamwidth ≤ 10°              | HFSS               |
+| 23-24| RFIC               | Advanced Calculus          | *RFIC Design (Lee)*                             | 28GHz LNA (Cadence); Optimize via derivatives    | NF < 2dB @ 28GHz             | Cadence Virtuoso   |
 
-**Final Project:**  
-✅ Publish findings on arXiv or present at IEEE conference.  
-
----
-
-## 🔧 Tools & Resources  
-
-### Electronics/RF Tools  
-| **Tool**               | **Premium**              | **Budget Alternative**       |  
-|-------------------------|--------------------------|------------------------------|  
-| Oscilloscope            | Rigol DS1054Z ($400)     | Hantek 2C42 (USB, $150)      |  
-| VNA                     | Keysight PNA ($10k+)     | NanoVNA-H4 ($50)             |  
-| Spectrum Analyzer       | Siglent SSA3032X ($2k)   | TinySA Ultra ($200)          |  
-
-### 5G/6G Tools  
-| **Tool**               | **Premium**              | **Budget Alternative**       |  
-|-------------------------|--------------------------|------------------------------|  
-| SDR Transceiver         | USRP B210 ($1k)          | PlutoSDR ($200)              |  
-| mmWave Dev Kit          | ADI ADRV9009 ($1.5k)     | MATLAB Simulations (Free)    |  
+**Semester 5 Final Exam:**  
+✅ Publish paper on mmWave beamforming with PDE-based thermal analysis.  
 
 ---
 
-## 📚 Book List  
-
+## 📚 Integrated Book List  
 ### Core Texts  
-1. **Electronics**: *Art of Electronics* (Horowitz), *RF Microelectronics* (Razavi).  
-2. **Digital/USB**: *Digital Design* (Harris), *USB Complete* (Axelson).  
-3. **5G/6G**: *5G NR* (Dahlman), *mmWave Wireless* (Rappaport).  
+- **Math**: *Calculus for Dummies*, *Linear Algebra Done Right*, *Signals and Systems*.  
+- **Electronics**: *Art of Electronics*, *RF Microelectronics*, *USB Complete*.  
+- **RF/5G**: *Microwave Engineering*, *5G NR*, *mmWave Wireless*.  
 
-### Math Fundamentals  
-1. *Algebra I for Dummies* → *Calculus for Dummies* → *RF Microelectronics*.  
-2. *Probability and Statistics for Engineering* (Devore).  
+### Tools & Software  
+- **Math**: Python/NumPy, Desmos, LTSpice.  
+- **Electronics**: KiCad, STM32CubeIDE, GNU Radio.  
 
 ---
 
-## 🎯 Graduation Checklist  
-- ✅ Build a 2.4GHz PA (300mW).  
-- ✅ Design a USB-controlled SDR.  
-- ✅ Simulate 5G NR waveforms.  
-- ✅ Publish research findings.  
+## 🎯 Graduation Requirements  
+1. **Build**: 2.4GHz PA, USB-CDC SDR, 28GHz phased array.  
+2. **Publish**: GitHub repo with math simulations + hardware documentation.  
+3. **Defend**: Explain OFDM, Smith charts, and PDE applications in RFIC design.  
 
-**Next Steps:** Dive into RFIC design or 6G research!  
+---
+
+## 📌 Weekly Time Commitment  
+- **Math**: 6-8 hours/week (theory + simulations).  
+- **Electronics**: 12+ hours/week (design + testing).  
+- **Weekends**: Cross-disciplinary integration (e.g., FFT on real SDR signals).  
